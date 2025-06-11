@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nós Dois</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+    }
+    .start-screen {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffe6f0;
+    }
+    .start-screen button {
+      padding: 1rem 2rem;
+      font-size: 1.5rem;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 10px;
+      color: white;
+      cursor: pointer;
+    }
+    .main-content {
+      display: none;
+      padding: 2rem;
+    }
+    img {
+      max-width: 90%;
+      border-radius: 15px;
+      margin: 1rem 0;
+    }
+    audio {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="start-screen">
+  <h1>Bem-vindo ao nosso cantinho 💖</h1>
+  <button onclick="showMainContent()">Clique aqui</button>
+</div>
+
+<div class="main-content">
+  <h2>Desde: 23/03/2016</h2>
+  <p id="days-count"></p>
+  
+  <img src="imagem1.jpg" alt="Foto do casal 1">
+  <img src="imagem2.jpg" alt="Foto do casal 2">
+
+  <p style="max-width: 600px; margin: auto; font-size: 1.2rem;">
+    Você é a razão da minha vida, o maior motivo de me fazer sentir que sou capaz de chegar onde almejo. O seu amor é tipo aqueles sonhos tão bons, que a gente não sente vontade de acordar, sabe?<br><br>
+    Nunca se esqueça que meu amor por você é infinito.<br>
+    Eu amo você pela pessoa que você é, pelo bom coração que você tem, pelos seus princípios e valores, pela sua integridade e luz que irradia por onde passa.<br><br>
+    Você é e sempre será minha alma gêmea!
+  </p>
+
+  <audio controls>
+    <source src="retratos-e-cancoes.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+</div>
+
+<script>
+  function showMainContent() {
+    document.querySelector('.start-screen').style.display = 'none';
+    document.querySelector('.main-content').style.display = 'block';
+    updateDaysCount();
+  }
+
+  function updateDaysCount() {
+    const startDate = new Date('2016-03-23');
+    const today = new Date();
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    document.getElementById('days-count').innerText = `Estamos juntos há ${diffDays} dias 💕`;
+  }
+</script>
+
+</body>
+</html>
