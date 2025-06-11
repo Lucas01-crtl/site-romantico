@@ -7,55 +7,97 @@
     <title>Nosso Amor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: #fce4ec;
-            color: #333;
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(to bottom, #1a1a1a, #3a3a3a);
+            color: #fff;
             text-align: center;
             margin: 0;
             padding: 20px;
+            position: relative;
+            overflow-x: hidden;
         }
+
+        body::before {
+            content: "❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-size: 2em;
+            opacity: 0.03;
+            white-space: pre;
+            background-repeat: repeat;
+            background-size: 100px 100px;
+            z-index: 0;
+        }
+
         h1 {
             margin-top: 30px;
+            position: relative;
+            z-index: 1;
         }
+
         .contador {
             font-size: 1.5em;
             margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
+
         .player {
             margin-top: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            position: relative;
+            z-index: 1;
         }
+
         .cover {
             width: 300px;
             height: 300px;
             object-fit: cover;
             border-radius: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
         }
+
         audio {
             margin-top: 20px;
             width: 300px;
         }
+
         .fotos {
             margin-top: 40px;
+            position: relative;
+            z-index: 1;
         }
+
         .fotos img {
             width: 300px;
             margin: 10px;
             border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(255, 255, 255, 0.2);
+        }
+
+        .mensagem {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            z-index: 1;
+            color: #ffd1dc;
         }
     </style>
 </head>
 <body>
     <h1>Estamos juntos há:</h1>
     <div class="contador">
-        3.653 dias,<br>
-        87.672 horas,<br>
-        5.260.320 minutos,<br>
-        e 315.619.200 segundos.
+        Te amo há 9 anos, 3.653 dias, 87.672 horas, 5.260.320 minutos e 315.619.200 segundos.
     </div>
 
     <div class="player">
@@ -70,6 +112,14 @@
         <h2>Nossas fotos</h2>
         <img src="imagem1.jpg" alt="Foto 1">
         <img src="imagem2.jpg" alt="Foto 2">
+    </div>
+
+    <div class="mensagem">
+        Você é a razão da minha vida, o maior motivo de me fazer sentir que sou capaz de chegar onde almejo.
+        O seu amor é tipo aqueles sonhos tão bons, que a gente não sente vontade de acordar, sabe? Nunca se esqueça que meu amor por você é infinito.
+        <br><br>
+        Eu amo você pela pessoa que você é, pelo bom coração que você tem, pelos seus princípios e valores, pela sua integridade e luz que irradia por onde você passa.
+        Você é e sempre será minha alma gêmea!
     </div>
 </body>
 </html>
